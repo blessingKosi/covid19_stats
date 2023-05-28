@@ -22,9 +22,9 @@ class EndpointCard extends StatelessWidget {
     Endpoint.casesConfirmed: EndpointCardData(
         'Confirmed cases', 'assets/fever.png', Color(0xFFE99600)),
     Endpoint.deaths:
-         EndpointCardData('Deaths', 'assets/death.png', Color(0xFFE40000)),
+        EndpointCardData('Deaths', 'assets/death.png', Color(0xFFE40000)),
     Endpoint.recovered:
-         EndpointCardData('Recovered', 'assets/patient.png', Color(0xFF70A901)),
+        EndpointCardData('Recovered', 'assets/patient.png', Color(0xFF70A901)),
   };
 
   String get formattedValue {
@@ -41,7 +41,7 @@ class EndpointCard extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       child: Card(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal:16.0, vertical: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -50,7 +50,7 @@ class EndpointCard extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     // ignore: deprecated_member_use
-                    .headline
+                    .headline1
                     .copyWith(color: cardData.color),
               ),
               SizedBox(height: 4),
@@ -62,20 +62,20 @@ class EndpointCard extends StatelessWidget {
                   children: <Widget>[
                     Image.asset(cardData.assetName, color: cardData.color),
                     Text(
-                     formattedValue,
+                      formattedValue,
                       style: Theme.of(context)
                           .textTheme
                           // ignore: deprecated_member_use
-                          .display1
-                          .copyWith(color: cardData.color,
-                          fontWeight: FontWeight.w500,
-                      ),
+                          .headline4
+                          .copyWith(
+                            color: cardData.color,
+                            fontWeight: FontWeight.w500,
+                          ),
                     ),
                   ],
                 ),
               ),
             ],
-
           ),
         ),
       ),

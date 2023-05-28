@@ -25,16 +25,16 @@ Future<void> showAlertDialog({
     );
   }
   return await showDialog(
-  context: context,
-  builder: (context) => AlertDialog(
-    title: Text(title),
-    content: Text(content),
-    actions: <Widget>[
-      FlatButton(
-        child: Text(defaultActionText),
-        onPressed: () => Navigator.of(context).pop(),
-      ),
-    ],
-  ),
+    context: context,
+    builder: (context) => AlertDialog(
+      title: Text(title),
+      content: Text(content),
+      actions: <Widget>[
+        TextButton(
+          child: Text(defaultActionText),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ],
+    ),
   );
 }
